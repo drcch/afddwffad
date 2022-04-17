@@ -19,7 +19,7 @@ cat << EOF > /usr/local/etc/xray/config.json
   "inbounds": [
     {
       "port": "$PORT",
-      "protocol": "VLESS",
+      "protocol": "$PROTOCOL",
       "settings": {
         "clients": [
           {
@@ -32,7 +32,7 @@ cat << EOF > /usr/local/etc/xray/config.json
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/"
+          "path": "/$WS_PATH"
         }
       }
     }
